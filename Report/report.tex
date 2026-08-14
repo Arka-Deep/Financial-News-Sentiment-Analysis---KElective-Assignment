@@ -1,0 +1,390 @@
+\documentclass[10pt,a4paper]{article}
+
+% ==================================================
+% PACKAGES
+% ==================================================
+\usepackage[margin=0.62in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{tcolorbox}
+\usepackage{colortbl}
+\usepackage{fancyhdr}
+\usepackage{microtype}
+
+% ==================================================
+% COLORS
+% ==================================================
+\definecolor{Navy}{HTML}{17365D}
+\definecolor{Blue}{HTML}{2F75B5}
+\definecolor{Teal}{HTML}{008C95}
+\definecolor{TealLight}{HTML}{E8F6F7}
+\definecolor{Orange}{HTML}{E67E22}
+\definecolor{OrangeLight}{HTML}{FFF3E8}
+\definecolor{GrayLight}{HTML}{F3F5F7}
+\definecolor{Gray}{HTML}{5B6573}
+\definecolor{Dark}{HTML}{202733}
+\definecolor{Green}{HTML}{2E7D32}
+\definecolor{Red}{HTML}{C62828}
+
+% ==================================================
+% HYPERLINKS
+% ==================================================
+\hypersetup{
+	colorlinks=true,
+	linkcolor=Navy,
+	urlcolor=Blue,
+	citecolor=Teal
+}
+
+% ==================================================
+% DOCUMENT STYLE
+% ==================================================
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+
+\captionsetup{
+	font=small,
+	labelfont=bf,
+	labelsep=period
+}
+
+% ==================================================
+% SECTION HEADINGS
+% ==================================================
+\titleformat{\section}
+{\large\bfseries\color{Navy}}
+{\thesection}
+{0.6em}
+{}
+[\color{Teal}\titlerule]
+
+\titlespacing*{\section}
+{0pt}
+{7pt}
+{4pt}
+
+% ==================================================
+% HEADER / FOOTER
+% ==================================================
+\pagestyle{fancy}
+\fancyhf{}
+
+\lhead{\small\color{Gray}
+	Financial News Sentiment vs. NIFTY50}
+
+\rhead{\small\color{Gray}
+	Project Report}
+
+\cfoot{\small\color{Gray}
+	\thepage}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{
+		\color{Teal}\leaders\hrule height \headrulewidth\hfill}}
+
+% ==================================================
+% CUSTOM BOXES
+% ==================================================
+
+\newtcolorbox{keybox}{
+	colback=TealLight,
+	colframe=Teal,
+	boxrule=0.8pt,
+	arc=3pt,
+	left=7pt,
+	right=7pt,
+	top=5pt,
+	bottom=5pt
+}
+
+\newtcolorbox{resultbox}{
+	colback=OrangeLight,
+	colframe=Orange,
+	boxrule=0.8pt,
+	arc=3pt,
+	left=7pt,
+	right=7pt,
+	top=5pt,
+	bottom=5pt
+}
+
+% ==================================================
+% TITLE
+% ==================================================
+\begin{document}
+	
+	\begin{center}
+		
+		\vspace*{-0.25cm}
+		
+		{\Large\bfseries\color{Navy}
+			Financial News Sentiment vs. NIFTY50 Movement}
+		
+		\vspace{3pt}
+		
+		{\normalsize\color{Teal}
+			Project Report}
+		
+		\vspace{5pt}
+		
+		{\small\color{Gray}
+			\textbf{Arkadeep Mondal (2405036)}}
+		
+		\vspace{5pt}
+		
+		{\color{Orange}\rule{0.85\linewidth}{1.2pt}}
+		
+	\end{center}
+	
+	% ==================================================
+	\section{Project Overview}
+	% ==================================================
+	
+	This project investigates whether the sentiment expressed in financial
+	news headlines can help explain or predict the direction of the NIFTY50
+	index. The analysis combines financial news data with historical NIFTY50
+	market data. The workflow includes data cleaning, date alignment, news
+	aggregation, rule-based sentiment analysis, feature engineering,
+	exploratory analysis, machine learning, and a simple backtest.
+	
+	The main objective was to determine whether news sentiment and recent
+	market information provide useful signals for predicting the next-day
+	direction of the NIFTY50.
+	
+	% ==================================================
+	% KEY RESULTS BOX
+	% ==================================================
+	
+	\begin{keybox}
+		\textbf{\color{Navy}Key Results}
+		
+		\smallskip
+		
+		\begin{tabular}{@{}lll@{}}
+			\textbf{Usable observations} & 125 & \\
+			\textbf{Training / Test split} & 100 / 25 & \\
+			\textbf{Best test accuracy} & 44.0\% & \\
+			\textbf{Best CV accuracy} & 51.25\% & \\
+			\textbf{Buy-and-Hold return} & -0.64\% & \\
+			\textbf{Model strategy return} & -0.77\% &
+		\end{tabular}
+	\end{keybox}
+	
+	% ==================================================
+	\section{Changes and Contributions}
+	% ==================================================
+	
+	I implemented and extended the project independently in a Jupyter
+	Notebook. The main changes and contributions were:
+	
+	\begin{itemize}[
+		leftmargin=*,
+		itemsep=1pt,
+		topsep=2pt
+		]
+		\item Cleaned and standardized the financial news and NIFTY50 datasets.
+		\item Aligned news and market observations using trading dates.
+		\item Grouped multiple news headlines occurring on the same date.
+		\item Implemented rule-based sentiment scoring for financial news.
+		\item Created sentiment-derived features including rolling averages
+		and short-term sentiment variability.
+		\item Created market features including lagged movement, volume change,
+		and high-low spread.
+		\item Constructed a next-day NIFTY50 direction target.
+		\item Used a chronological train/test split to avoid future-data leakage.
+		\item Implemented Logistic Regression, Random Forest, and XGBoost models.
+		\item Performed Random Forest hyperparameter tuning using
+		TimeSeriesSplit cross-validation.
+		\item Evaluated predictions using accuracy, classification reports,
+		and a confusion matrix.
+		\item Analyzed Random Forest feature importance.
+		\item Compared a model-based trading strategy against buy-and-hold.
+	\end{itemize}
+	
+	% ==================================================
+	\section{Data and Feature Engineering}
+	% ==================================================
+	
+	After preprocessing and feature construction, 125 observations were
+	available for machine learning. Eight features were used:
+	
+	\begin{center}
+		\small
+		\rowcolors{1}{GrayLight}{white}
+		\begin{tabular}{>{\ttfamily}llll}
+			sentiment\_score &
+			sentiment\_ma3 &
+			sentiment\_ma7 &
+			sentiment\_std3 \\
+			
+			movement\_lag1 &
+			movement\_lag2 &
+			volume\_change &
+			high\_low\_spread
+		\end{tabular}
+	\end{center}
+	
+	The target variable represents whether the NIFTY50 moves upward on the
+	following trading day. The data was split chronologically into 100
+	training observations and 25 final test observations.
+	
+	\begin{resultbox}
+		\textbf{\color{Orange}Time-aware evaluation:}
+		The first 100 observations were used for model training and validation,
+		while the final 25 observations were kept completely unseen for the
+		final evaluation. This prevents future observations from leaking into
+		the training process.
+	\end{resultbox}
+	
+	% ==================================================
+	\section{Machine Learning Analysis}
+	% ==================================================
+	
+	Three initial models were evaluated: Logistic Regression, Random Forest,
+	and XGBoost. A majority-class classifier was also used as a baseline.
+	
+	\begin{table}[H]
+		\centering
+		\caption{Model performance on the held-out test period.}
+		
+		\vspace{2pt}
+		
+		\rowcolors{2}{GrayLight}{white}
+		\begin{tabular}{>{\bfseries}l c}
+			\toprule
+			\rowcolor{Navy}
+			\color{white}\textbf{Model} &
+			\color{white}\textbf{Accuracy} \\
+			\midrule
+			Majority Baseline & 44.0\% \\
+			Logistic Regression & 44.0\% \\
+			Random Forest & 44.0\% \\
+			XGBoost & 40.0\% \\
+			Tuned Random Forest & \textbf{44.0\%} \\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+	
+	The initial results show that Logistic Regression and Random Forest did
+	not improve upon the majority baseline, while XGBoost performed slightly
+	worse. Random Forest hyperparameter tuning selected
+	$n\_estimators=100$, $max\_depth=3$, and $min\_samples\_leaf=20$.
+	
+	The best time-series cross-validation accuracy was 51.25\%, but the
+	accuracy on the untouched test period remained 44.0\%. Therefore,
+	hyperparameter tuning did not produce an improvement in out-of-sample
+	performance.
+	
+	% ==================================================
+	\section{Feature Importance}
+	% ==================================================
+	
+	The tuned Random Forest indicated that previous-day market movement
+	(\texttt{movement\_lag1}) was the most influential feature, followed by
+	the seven-day sentiment moving average (\texttt{sentiment\_ma7}).
+	High-low spread and short-term sentiment variability were also relatively
+	important.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[
+		width=0.76\linewidth
+		]{../plots/tunedRandomForestFeatureImportance.png}
+		
+		\caption{
+			Feature importance from the tuned Random Forest.
+		}
+		
+		\label{fig:featureimportance}
+	\end{figure}
+	
+	These results suggest that recent market behaviour and aggregated news
+	sentiment were more influential than raw sentiment alone within the
+	trained Random Forest. Feature importance should be interpreted as model
+	importance rather than evidence of causality.
+	
+	% ==================================================
+	\section{Prediction Errors}
+	% ==================================================
+	
+	The tuned Random Forest produced the following confusion matrix:
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[
+		width=0.46\linewidth
+		]{../plots/tunedRandomForestConfusionMatrix.png}
+		
+		\caption{
+			Confusion matrix for the tuned Random Forest.
+		}
+		
+		\label{fig:confusion}
+	\end{figure}
+	
+	The model correctly classified 5 downward movements and 6 upward
+	movements, resulting in 11 correct predictions out of 25 test
+	observations. The small test set means that one additional correct
+	prediction changes the measured accuracy by approximately four
+	percentage points.
+	
+	% ==================================================
+	\section{Backtest and Discussion}
+	% ==================================================
+	
+	A simple long-only strategy was constructed using the tuned Random
+	Forest predictions. When the model predicted an upward movement, the
+	strategy held the NIFTY50 for the following day; otherwise, it remained
+	out of the market.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[
+		width=0.76\linewidth
+		]{../plots/backtest.png}
+		
+		\caption{
+			Model strategy compared with buy-and-hold.
+		}
+		
+		\label{fig:backtest}
+	\end{figure}
+	
+	Over the evaluation period, the buy-and-hold strategy returned
+	$-0.64\%$, while the model-based strategy returned $-0.77\%$.
+	Consequently, the model strategy underperformed buy-and-hold by
+	approximately 0.13 percentage points.
+	
+	% ==================================================
+	\section{Conclusion and Limitations}
+	% ==================================================
+	
+	The analysis did not find evidence that the tested sentiment and market
+	features could reliably predict next-day NIFTY50 direction during the
+	held-out period. The best-performing models achieved 44.0\% accuracy,
+	equal to the majority baseline, while XGBoost achieved 40.0\%.
+	
+	The results should be interpreted cautiously because only 125 usable
+	observations were available for machine learning and the final test set
+	contained 25 observations. The short evaluation period means that each
+	individual prediction has a relatively large effect on measured
+	accuracy. The backtest also covers a limited period and does not include
+	transaction costs, slippage, taxes, or other real-world trading effects.
+	
+	\begin{keybox}
+		\textbf{\color{Navy}Overall conclusion:}
+		The implemented models did not outperform the baseline on the held-out
+		period. However, the project demonstrates a complete time-aware workflow
+		from financial-news sentiment extraction and feature engineering through
+		machine-learning evaluation and strategy comparison.
+	\end{keybox}
+	
+\end{document}
