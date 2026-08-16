@@ -74,23 +74,9 @@ The project investigates whether information contained in financial news headlin
 Clone the repository:
 
 ```bash
-git clone https://github.com/<your-username>/stock-market-sentiment-prediction.git
-cd stock-market-sentiment-prediction
+git clone https://github.com/Arka-Deep/Financial-News-Sentiment-Analysis---KElective-Assignment.git
+cd Financial-News-Sentiment-Analysis---KElective-Assignment
 ```
-
-Create a virtual environment:
-
-```bash
-python -m venv venv
-```
-
-### Linux / macOS
-
-```bash
-source venv/bin/activate
-```
-
-
 
 Install the required packages:
 
