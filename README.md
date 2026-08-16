@@ -1,4 +1,5 @@
-# Stock Market Direction Prediction Using News Sentiment
+# Financial-News-Sentiment-Analysis---KElective-Assignment
+
 
 An academic machine learning and NLP project exploring whether **financial news sentiment can help predict the next-day direction of the NIFTY 50 stock market**.
 
