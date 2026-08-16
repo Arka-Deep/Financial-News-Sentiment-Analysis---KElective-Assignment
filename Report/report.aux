@@ -4,18 +4,44 @@
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Project Overview}{1}{section.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2}Changes and Contributions}{1}{section.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3}Data and Feature Engineering}{1}{section.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}Machine Learning Analysis}{2}{section.4}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Model performance on the held-out test period.}}{2}{table.caption.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5}Feature Importance}{2}{section.5}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces  Feature importance from the tuned Random Forest. }}{2}{figure.caption.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Data and Feature Engineering}{2}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Rule-Based Sentiment Analysis}{2}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Original Exploratory Data Analysis}{2}{section.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces  Distribution of the original rule-based financial-news sentiment scores. }}{3}{figure.caption.1}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:featureimportance}{{1}{2}{Feature importance from the tuned Random Forest}{figure.caption.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Prediction Errors}{2}{section.6}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces  Confusion matrix for the tuned Random Forest. }}{3}{figure.caption.3}\protected@file@percent }
-\newlabel{fig:confusion}{{2}{3}{Confusion matrix for the tuned Random Forest}{figure.caption.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Backtest and Discussion}{3}{section.7}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces  Model strategy compared with buy-and-hold. }}{3}{figure.caption.4}\protected@file@percent }
-\newlabel{fig:backtest}{{3}{3}{Model strategy compared with buy-and-hold}{figure.caption.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion and Limitations}{3}{section.8}\protected@file@percent }
-\gdef \@abspage@last{4}
+\newlabel{fig:histogram}{{1}{3}{Distribution of the original rule-based financial-news sentiment scores}{figure.caption.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces  Average rule-based sentiment by NIFTY50 market direction. }}{3}{figure.caption.2}\protected@file@percent }
+\newlabel{fig:barplot}{{2}{3}{Average rule-based sentiment by NIFTY50 market direction}{figure.caption.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces  Relationship between rule-based sentiment and same-day NIFTY50 market movement. }}{4}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:scatterplot}{{3}{4}{Relationship between rule-based sentiment and same-day NIFTY50 market movement}{figure.caption.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}FinBERT Sentiment Analysis}{4}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}FinBERT Sentiment Distribution}{4}{subsection.6.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces  Distribution of FinBERT sentiment labels across financial-news headlines. }}{5}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:finbert_distribution}{{4}{5}{Distribution of FinBERT sentiment labels across financial-news headlines}{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Rule-Based Sentiment vs. FinBERT}{5}{subsection.6.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces  Comparison between the original rule-based sentiment score and the FinBERT sentiment score. }}{5}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:rulefinbert}{{5}{5}{Comparison between the original rule-based sentiment score and the FinBERT sentiment score}{figure.caption.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Machine Learning Analysis}{6}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Original Model Results}{6}{subsection.7.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Original model performance on the held-out test period.}}{6}{table.caption.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}FinBERT Model Results}{6}{subsection.7.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces FinBERT-based model performance on the held-out test period.}}{7}{table.caption.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Final Model Comparison}{7}{section.8}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Complete model comparison on the held-out test period.}}{7}{table.caption.8}\protected@file@percent }
+\newlabel{tab:allmodels}{{3}{7}{Complete model comparison on the held-out test period}{table.caption.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces  Final comparison of original and FinBERT-based machine-learning models. }}{7}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:modelcomparison}{{6}{7}{Final comparison of original and FinBERT-based machine-learning models}{figure.caption.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9}Feature Importance}{7}{section.9}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces  Feature importance from the tuned Random Forest. }}{8}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:featureimportance}{{7}{8}{Feature importance from the tuned Random Forest}{figure.caption.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {10}Prediction Errors}{8}{section.10}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces  Confusion matrix for the tuned Random Forest. }}{8}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:confusion}{{8}{8}{Confusion matrix for the tuned Random Forest}{figure.caption.11}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {11}Backtest and Discussion}{9}{section.11}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces  Model strategy compared with buy-and-hold during the test period. }}{9}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:backtest}{{9}{9}{Model strategy compared with buy-and-hold during the test period}{figure.caption.12}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {12}Discussion of the FinBERT Extension}{9}{section.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {13}Limitations}{9}{section.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {14}Conclusion}{10}{section.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {15}Final Summary}{10}{section.15}\protected@file@percent }
+\gdef \@abspage@last{10}

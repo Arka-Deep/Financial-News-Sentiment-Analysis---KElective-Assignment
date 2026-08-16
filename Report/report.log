@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.3)  14 AUG 2026 18:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.3)  16 AUG 2026 20:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -836,20 +836,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<../plots/tunedRandomForestFeatureImportance.png, id=51, 569.9694pt x 353.6412p
-t>
-File: ../plots/tunedRandomForestFeatureImportance.png Graphic file (type png)
-<use ../plots/tunedRandomForestFeatureImportance.png>
-Package pdftex.def Info: ../plots/tunedRandomForestFeatureImportance.png  used 
-on input line 300.
-(pdftex.def)             Requested size: 385.99649pt x 239.50151pt.
-<../plots/tunedRandomForestConfusionMatrix.png, id=53, 412.1799pt x 337.9827pt>
-
-File: ../plots/tunedRandomForestConfusionMatrix.png Graphic file (type png)
-<use ../plots/tunedRandomForestConfusionMatrix.png>
-Package pdftex.def Info: ../plots/tunedRandomForestConfusionMatrix.png  used on
- input line 324.
-(pdftex.def)             Requested size: 233.63455pt x 191.57944pt.
+<../plots/histogram.png, id=95, 495.7722pt x 337.9827pt>
+File: ../plots/histogram.png Graphic file (type png)
+<use ../plots/histogram.png>
+Package pdftex.def Info: ../plots/histogram.png  used on input line 377.
+(pdftex.def)             Requested size: 365.68414pt x 249.30391pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -858,11 +849,98 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-7.69997pt}.
 
-[2 <../plots/tunedRandomForestFeatureImportance.png>]
-<../plots/backtest.png, id=63, 714.7503pt x 353.6412pt>
+[2]
+<../plots/barplot.png, id=105, 495.7722pt x 334.851pt>
+File: ../plots/barplot.png Graphic file (type png)
+<use ../plots/barplot.png>
+Package pdftex.def Info: ../plots/barplot.png  used on input line 394.
+(pdftex.def)             Requested size: 365.68414pt x 246.9939pt.
+<../plots/scatterplot.png, id=107, 510.708pt x 337.9827pt>
+File: ../plots/scatterplot.png Graphic file (type png)
+<use ../plots/scatterplot.png>
+Package pdftex.def Info: ../plots/scatterplot.png  used on input line 410.
+(pdftex.def)             Requested size: 365.68414pt x 242.01164pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 19.69997pt, for example:
+(fancyhdr)                \setlength{\headheight}{19.69997pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-7.69997pt}.
+
+[3 <../plots/histogram.png> <../plots/barplot.png>]
+<../plots/finbert_sentiment_distribution.png, id=117, 570.2103pt x 353.6412pt>
+File: ../plots/finbert_sentiment_distribution.png Graphic file (type png)
+<use ../plots/finbert_sentiment_distribution.png>
+Package pdftex.def Info: ../plots/finbert_sentiment_distribution.png  used on i
+nput line 465.
+(pdftex.def)             Requested size: 365.68414pt x 226.79904pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 19.69997pt, for example:
+(fancyhdr)                \setlength{\headheight}{19.69997pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-7.69997pt}.
+
+[4 <../plots/scatterplot.png>]
+<../plots/rule_based_vs_finbert.png, id=126, 642.4803pt x 425.9112pt>
+File: ../plots/rule_based_vs_finbert.png Graphic file (type png)
+<use ../plots/rule_based_vs_finbert.png>
+Package pdftex.def Info: ../plots/rule_based_vs_finbert.png  used on input line
+ 491.
+(pdftex.def)             Requested size: 365.68414pt x 242.42096pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 19.69997pt, for example:
+(fancyhdr)                \setlength{\headheight}{19.69997pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-7.69997pt}.
+
+[5 <../plots/finbert_sentiment_distribution.png> <../plots/rule_based_vs_finber
+t.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 19.69997pt, for example:
+(fancyhdr)                \setlength{\headheight}{19.69997pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-7.69997pt}.
+
+[6]
+<../plots/original_vs_finbert_models.png, id=142, 859.2903pt x 425.6703pt>
+File: ../plots/original_vs_finbert_models.png Graphic file (type png)
+<use ../plots/original_vs_finbert_models.png>
+Package pdftex.def Info: ../plots/original_vs_finbert_models.png  used on input
+ line 670.
+(pdftex.def)             Requested size: 446.94902pt x 221.40828pt.
+<../plots/tunedRandomForestFeatureImportance.png, id=143, 569.9694pt x 353.6412
+pt>
+File: ../plots/tunedRandomForestFeatureImportance.png Graphic file (type png)
+<use ../plots/tunedRandomForestFeatureImportance.png>
+Package pdftex.def Info: ../plots/tunedRandomForestFeatureImportance.png  used 
+on input line 701.
+(pdftex.def)             Requested size: 385.99649pt x 239.50151pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 19.69997pt, for example:
+(fancyhdr)                \setlength{\headheight}{19.69997pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-7.69997pt}.
+
+[7 <../plots/original_vs_finbert_models.png>]
+<../plots/tunedRandomForestConfusionMatrix.png, id=153, 412.1799pt x 337.9827pt
+>
+File: ../plots/tunedRandomForestConfusionMatrix.png Graphic file (type png)
+<use ../plots/tunedRandomForestConfusionMatrix.png>
+Package pdftex.def Info: ../plots/tunedRandomForestConfusionMatrix.png  used on
+ input line 732.
+(pdftex.def)             Requested size: 233.63455pt x 191.57944pt.
+<../plots/backtest.png, id=154, 714.7503pt x 353.6412pt>
 File: ../plots/backtest.png Graphic file (type png)
 <use ../plots/backtest.png>
-Package pdftex.def Info: ../plots/backtest.png  used on input line 352.
+Package pdftex.def Info: ../plots/backtest.png  used on input line 764.
 (pdftex.def)             Requested size: 385.99649pt x 190.98497pt.
 
 
@@ -872,7 +950,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-7.69997pt}.
 
-[3 <../plots/tunedRandomForestConfusionMatrix.png> <../plots/backtest.png>]
+[8 <../plots/tunedRandomForestFeatureImportance.png> <../plots/tunedRandomFores
+tConfusionMatrix.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 19.69997pt, for example:
@@ -880,36 +959,46 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-7.69997pt}.
 
-[4] (./report.aux)
+[9 <../plots/backtest.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 19.69997pt, for example:
+(fancyhdr)                \setlength{\headheight}{19.69997pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-7.69997pt}.
+
+[10] (./report.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
  ***********
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 09BB724DC9CBC9B3038DD532E8FE2EE8;1276.
+(rerunfilecheck)             Checksum: B58FAF3C05C47F9557E2E093133D816A;3179.
  ) 
 Here is how much of TeX's memory you used:
- 26818 strings out of 467363
- 510606 string characters out of 5419002
- 958358 words of memory out of 6000000
- 55450 multiletter control sequences out of 15000+600000
- 634875 words of font info for 96 fonts, out of 8000000 for 9000
+ 26946 strings out of 467363
+ 513229 string characters out of 5419002
+ 958093 words of memory out of 6000000
+ 55521 multiletter control sequences out of 15000+600000
+ 635700 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 98i,12n,108p,1003b,586s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,12n,108p,1003b,635s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmtt9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-supe
-r/sfrm1000.pfb>
-Output written on report.pdf (4 pages, 466871 bytes).
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
+t10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on report.pdf (10 pages, 1091194 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
- 17 named destinations out of 1000 (max. 500000)
- 25692 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 243 PDF objects out of 1000 (max. 8388607)
+ 185 compressed objects within 2 object streams
+ 42 named destinations out of 1000 (max. 500000)
+ 25810 words of extra memory for PDF output out of 29859 (max. 10000000)
 
