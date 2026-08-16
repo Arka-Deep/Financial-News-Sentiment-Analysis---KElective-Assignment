@@ -103,7 +103,7 @@ xgboost
 
 ---
 
-# ▶ Running the Project
+#  Running the Project
 
 The project can be run through the Jupyter Notebook.
 
